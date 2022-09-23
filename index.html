@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>仿京东商城</title>
+  <!-- 引入小图标 -->
+  <link rel="icon" href="./images/favicon.ico">
+  <!-- 引入放大镜图标 -->
+  <link rel="stylesheet" href="./css/iconfont.css">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+  <!-- 头部 -->
+  <div id="header">
+    <div class="wrap">
+      <!-- logo -->
+      <div id="logo"></div>
+      <!-- 搜索框 id=search的class用于后面的吸顶效果 -->
+      <div id="search" class>
+       <div class="search-m">
+          <!-- 吸顶效果的小logo-->
+          <div class="search-logo"></div>
+          <div class="form">
+            <div class="search-helper"></div>
+            <input type="text" class="text" placeholder="iPhone14 苹果手机">
+            <button class="button iconfont icon-fangdajing"></button>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 轮播图 -->
+  <div class="fs">
+    <div class="wrap fs_inner">
+      <div class="fs_col1"></div>
+      <div class="fs_col2">
+        <div class="slideBanner">
+          <button class="slide_pre iconfont icon-zuojiantou"></button>
+          <img src="./images/1.avif" class="img" style="width: 100%; height: 100%">
+          <button class="slide_next iconfont icon-youjiantou"></button>
+          <ul class="slide_bottom">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+      <div class="fs_col3"></div>
+    </div>
+  </div>
+
+  <!-- 楼层效果 -->
+  <div id="app">
+    <div class="wrap seckill">京东秒杀</div>
+    <div class="wrap spec">特色优选</div>
+    <div class="wrap channels">频道广场</div>
+    <div class="wrap feeds">为你推荐</div>
+    <div class="elevator_box">
+      <ul class="elevator">
+        <li>
+          <a href="javascript:void(0);" class="elevator_a">
+            <span class="elevator_text">京东秒杀</span>
+          </a>
+        </li>
+        <hr class="elevator_hr"/>
+        <li>
+          <a href="javascript:void(0);" class="elevator_a">
+            <span class="elevator_text">特色优选</span>
+          </a>
+        </li>
+        <hr class="elevator_hr"/>
+        <li>
+          <a href="javascript:void(0);" class="elevator_a">
+            <span class="elevator_text">频道广场</span>
+          </a>
+        </li>
+        <hr class="elevator_hr"/>
+        <li>
+          <a href="javascript:void(0);" class="elevator_a">
+            <span class="elevator_text">为你推荐</span>
+          </a>
+        </li>
+      </ul>
+      <a class="elevator_totop" href="javascript:void(0);">
+        <span class="elevator_totop_icon iconfont icon-shangjiantou"></span>
+        <span class="elevator_totop_txt">顶部</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 引入js文件 -->
+  <script src="./js/index.js"></script>
+</body>
+</html>

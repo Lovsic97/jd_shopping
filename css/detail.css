@@ -1,0 +1,153 @@
+/*通用样式*/
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrap {
+  width: 1210px;
+  margin: 0 auto;
+}
+
+/*顶部*/
+.crumb-wrap {
+  height: 44px;
+  background-color: #f2f2f2;
+
+}
+
+/*商品信息 左*/
+.product-intro {
+  height: 764.45px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.preview-wrap {
+  width: 352px;
+  height: 537px;
+  float: left;
+  padding-bottom: 15px;
+}
+.spec-n1 {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border: 1px solid #eee;
+  margin-bottom: 20px;
+}
+.spec-n1 img {
+  width: 350px;
+  height: 350px;
+  border: 0;
+  vertical-align: middle;
+}
+.smallBox {
+  display: none;
+  position: absolute;
+  background-color: gold;
+  opacity: 0.4;
+  border: 1px solid #C0C0C0;
+  cursor: move;
+}
+.bigBox {
+  display: none;
+  position: absolute;
+  top: -2px;
+  left: 351px;
+  width: 540px;
+  height: 540px;
+  overflow: hidden;
+  border: 1px solid #f4f4f4;
+}
+.bigBox img {
+  width: 800px;
+  height: 800px;
+}
+.spec-list {
+  width: 352px;
+  height: 54px;
+  position: relative;
+  margin-bottom: 18px;
+}
+.arrow-pre {
+  display: block;
+  width: 22px;
+  height: 32px;
+  float: left;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  text-decoration: none;
+}
+.arrow-pre-img {
+  background: url(../images/bothArrow.png);
+  background-position: 0 -54px;
+}
+.arrow-next {
+  display: block;
+  width: 22px;
+  height: 32px;
+  float: left;
+  right: 0;
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  margin-top: -16px;
+  text-decoration: none;
+}
+.arrow-next-img {
+  background: url(../images/bothArrow.png);
+  background-position: -78px 0;
+}
+.spec-items {
+  position: relative;
+  width: 290px;
+  height: 54px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.lh {
+  position: absolute;
+  width: 406px;
+  height: 54px;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  list-style: none;
+  transition: all .5s ease;
+}
+.lh li {
+  margin: 0 2px;
+  float: left;
+  max-width: 60px;
+  max-height: 70px;
+  border: 2px solid #fff;
+}
+.lh img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+.lh .img-hover {
+  border: 2px solid #e53e41;
+}
+.itemInfo-wrap {
+  width: 590px;
+  height: 764.45px;
+  float: left;
+  margin-left: 30px;
+  margin-right: 24px;
+  min-height: 590px;
+  background-color: red;
+}
+
+
+.track {
+  width: 210px;
+  height: 764.45px;
+  position: static;
+  float: right;
+  right: auto;
+  top: -10px;
+  background: green;
+}
