@@ -4,16 +4,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>商品详情</title>
   <!-- 引入小图标 -->
   <link rel="icon" href="./images/favicon.ico">
   <!-- 引入样式 -->
   <link rel="stylesheet" href="./css/detail.css">
 </head>
 <body>
+  <!--头部灰色区域-->
   <div class="crumb-wrap"></div>
+  <!-- 中间商品图片和购物选项以及加入购物车-->
   <div class="wrap">
     <div class="product-intro">
+      <!-- 左边商品图片 -->
       <div class="preview-wrap">
         <div class="spec-n1">
           <img src="./images/111.avif">
@@ -52,7 +55,23 @@
           </div>
         </div>
       </div>
-      <div class="itemInfo-wrap"></div>
+      <!-- 中间商品规格选项和加入购物车 -->
+      <div class="itemInfo-wrap">
+        <div class="summary-up"></div>
+        <div class="summary-down">
+          <div class="choose-btns">
+            <div class="choose-amount">
+              <div class="wrap-input">
+                <input value="1" class="amountInput">
+                <a href="javascript:;" class="btn-reduce disabled">-</a>
+                <a href="javascript:;" class="btn-add">+</a>
+              </div>
+            </div>
+            <a href="javascript:;" class="addCartBtn">加入购物车</a>
+          </div>
+        </div>
+      </div>
+      <!-- 右边的看了又看 -->
       <div class="track"></div>
     </div>
   </div>

@@ -71,3 +71,25 @@ specN1.onmousemove = function(event) {
   bigImg.style.top = -bigImgTransY + 'px';
   bigImg.style.left = -bigImgTransX + 'px';
 }
+
+
+// 实现添加购物车时选择商品数量
+let btnReduce = document.querySelector('.btn-reduce');
+let btnAdd = document.querySelector('.btn-add');
+let amountInput = document.querySelector('.amountInput');
+let count = parseInt(amountInput.value);
+btnAdd.onclick = function() {
+  count += 1;
+  amountInput.value = count;
+  btnReduce.className = 'btn-reduce';
+}
+btnReduce.onclick = function() {
+  if(count > 1) {
+    count -= 1;
+    amountInput.value = count;
+    btnReduce.className = 'btn-reduce';
+  } else {
+    amountInput.value = 1;
+    btnReduce.className = 'btn-reduce disabled';
+  }
+}
