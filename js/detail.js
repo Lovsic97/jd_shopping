@@ -20,7 +20,6 @@ rightArrow.onclick = function() {
 // 实现商品信息左边部分的大图片跟随小图片一起切换效果
 let lis = document.querySelectorAll('.lh li');
 let specN1 = document.querySelector('.spec-n1');
-console.log(specN1.children[2])
 // 去除整体样式函数
 function clearClass() {
   for(let j = 0; j < lis.length; j++) {
@@ -32,14 +31,14 @@ for(let i = 0; i < lis.length; i++) {
     clearClass()
     lis[i].className = 'img-hover';
     specN1.children[0].src = lis[i].children[0].src;
-    specN1.children[2].style.background = 'url(' + lis[i].children[0].src + ') no-repeat';
-    specN1.children[2].style.backgroundSize = '800px 800px';
+    specN1.children[2].children[0].src = lis[i].children[0].src;
   }
 }
 
 // 实现放大镜效果
 let smallBox = document.querySelector('.smallBox');
 let bigBox = document.querySelector('.bigBox');
+let bigImg = document.querySelector('.bigBox img');
 specN1.onmouseover = function() {
   smallBox.style.display = 'block';
   bigBox.style.display = 'block';
@@ -65,14 +64,10 @@ specN1.onmousemove = function(event) {
   smallBox.style.left = smallBoxLeft + 'px';
   smallBox.style.top = smallBoxTop + 'px';
   // 大图随着小图移动
-  // 首先有个前提：左边图片/小图 = 大图/右边固定隐藏的图片，这个比较相当于等比扩大。所以大图移动的距离/小图移动的距离 = 大图的宽/小图的宽
-  // 大图移动距离 = （大图的宽/小图的宽）* 小图移动的距离
-  let smallH = smallBox.offsetHeight;
-  let bigH = bigBox.offsetHeight;
-  // let smallW = smallBox.offsetWidth;
-  // let bigW = bigBox.offsetWidth;
-  let bigTransY = (bigH / smallH) * smallBoxTop;
-  // let bigTransX = (bigW / smallW) * smallBoxLeft;
-  bigBox.style.top = -bigTransY + 'px';
-  // bigBox.style.left = -bigTransX + 'px';
+  // 首先有个前提：左边盒子/小图 = 大图/右边固定隐藏的图片，这个比较相当于等比扩大。所以大图移动的距离/小图移动的距离 = 大图的宽/左边盒子的宽
+  // 大图移动距离 = （大图的宽/左边盒子的宽）* 小图移动的距离
+  let bigImgTransX = (bigImg.offsetWidth / specN1.offsetWidth) * smallBoxLeft;
+  let bigImgTransY = (bigImg.offsetHeight / specN1.offsetHeight) * smallBoxTop;
+  bigImg.style.top = -bigImgTransY + 'px';
+  bigImg.style.left = -bigImgTransX + 'px';
 }
