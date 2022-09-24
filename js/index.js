@@ -17,6 +17,20 @@ text.onblur = function() {
   searchHelper.style.display = 'none';
 }
 
+// 实现左边导航栏选中哪条展示哪条的扩展页面
+let cateLis = document.querySelectorAll('.cate_menu_item');
+let catePart = document.querySelectorAll('.cate_part');
+let catePop = document.querySelector('.cate_pop');
+for(let i = 0; i < cateLis.length; i++) {
+  cateLis[i].onmouseover = function() {
+    catePop.style.display = 'block';
+    catePart[i].style.display = 'block';
+  }
+  cateLis[i].onmouseout = function() {
+    catePop.style.display = 'none';
+    catePart[i].style.display = 'none';
+  }
+}
 
 // 实现轮播图的切换
 let img = document.querySelector('.img');
@@ -75,6 +89,78 @@ for(let i = 0; i < lis.length; i++) {
     count = i;
     changeImg();
   }
+}
+
+// 实现右边小轮播图效果
+let rightSlidebtn = document.querySelectorAll('.slideRecommend button');
+let slideRecommend = document.querySelector('.slideRecommend');
+slideRecommend.onmouseenter = function() {
+  rightSlidebtn[0].style.display = 'block';
+  rightSlidebtn[1].style.display = 'block';
+}
+slideRecommend.onmouseleave = function() {
+  rightSlidebtn[0].style.display = 'none';
+  rightSlidebtn[1].style.display = 'none';
+}
+let rightSlideItem = document.querySelectorAll('.right_slide_item');
+let index = 0;
+// 清除所有的样式
+function clearOpacity() {
+  for(let i = 0; i < rightSlideItem.length; i++) {
+    rightSlideItem[i].style.opacity = '0';
+  }
+}
+// 左右按钮切换
+rightSlidebtn[0].onclick = function() {
+  if(index > 0) {
+    clearOpacity();
+    index -= 1;
+    rightSlideItem[index].style.opacity = '1';
+  } else {
+    index = rightSlideItem.length - 1;
+    clearOpacity();
+    rightSlideItem[index].style.opacity = '1';
+  }
+}
+rightSlidebtn[1].onclick = function() {
+  if(index < rightSlideItem.length - 1) {
+    clearOpacity();
+    index += 1;
+    rightSlideItem[index].style.opacity = '1';
+  } else {
+    index = 0;
+    clearOpacity();
+    rightSlideItem[index].style.opacity = '1';
+  }
+}
+// 图片自动播放
+let timerRight = setInterval(function(){
+  if(index < rightSlideItem.length - 1) {
+    clearOpacity();
+    index += 1;
+    rightSlideItem[index].style.opacity = '1';
+  } else {
+    index = 0;
+    clearOpacity();
+    rightSlideItem[index].style.opacity = '1';
+  }
+}, 4000)
+// 鼠标移入不自动播放，移除自动播放
+slideRecommend.onmouseover = function() {
+  clearInterval(timerRight);
+}
+slideRecommend.onmouseout = function() {
+  timerRight = setInterval(function(){
+    if(index < rightSlideItem.length - 1) {
+      clearOpacity();
+      index += 1;
+      rightSlideItem[index].style.opacity = '1';
+    } else {
+      index = 0;
+      clearOpacity();
+      rightSlideItem[index].style.opacity = '1';
+    }
+  }, 4000)
 }
 
 

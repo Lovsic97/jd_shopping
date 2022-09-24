@@ -285,7 +285,61 @@ a {
 }
 
 
-/* 轮播图样式 */
+/* 左侧导航 */
+.fs_col1 {
+  width: 190px;
+  position: relative;
+}
+.cate_menu {
+  width: 190px;
+  height: 450px;
+  padding: 10px 0;
+  overflow: hidden;
+  background-color: #fefefe;
+  color: #636363;
+}
+.cate_menu_item {
+  width: 172px;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 18px;
+  overflow: hidden;
+  font-size: 0;
+}
+.cate_menu_item:hover {
+  background-color: #ccc;
+}
+.cate_menu_lk {
+  font-size: 16px;
+  color: #333;
+  font-weight: 300;
+}
+.cate_menu_lk:hover {
+  color: #f10214;
+}
+.cate_menu_line {
+  padding: 0 2px;
+  font-size: 14px;
+}
+.cate_pop {
+  display: none;
+  z-index: 10;
+  width: 998px;
+  height: 468px;
+  position: absolute;
+  top: -1px;
+  left: 191px;
+  border: 1px solid #f7f7f7;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgb(0 0 0 / 30%);
+}
+.cate_part {
+  padding: 20px 0 10px 20px;
+  display: none;
+}
+
+
+/* 左侧轮播图样式 */
 .fs {
   height: 470px;
   margin-top: 10px;
@@ -300,9 +354,6 @@ a {
   float: left;
   height: 470px;
   margin-right: 10px;
-}
-.fs_col1 {
-  width: 190px;
 }
 .fs_col2 {
   width: 790px;
@@ -367,18 +418,209 @@ a {
   background-color: #fff;
 }
 
+/* 右侧轮播图样式*/
 .slideRecommend {
   width: 190px;
-  height: 100%;
+  height: 470px;
   float: left;
   overflow: hidden;
+  z-index: 5;
+  position: relative;
 }
+.right_slide_item { 
+  float: left;
+  position: absolute;
+  width: 190px;
+  height: 470px;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  z-index: 1;
+  transition: opacity 300ms ease-in-out 0s;
+}
+.right_slide_item a {
+  height: 150px;
+  display: block;
+  margin-bottom: 10px;
+}
+.right_slide_item img {
+  width: 100%;
+  height: 100%;
+}
+
+
+/*右侧小图标和用户信息*/
 .fs_col3{
   position: relative;
   float: right;
   width: 190px;
   height: 470px;
   overflow: hidden;
+}
+.user {
+  width: 190px;
+  height: 102px;
+  background: #fff;
+  overflow: hidden;
+}
+.user_inner {
+  width: 190px;
+  height: 67px;
+  position: relative;
+}
+.user_avatar {
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  left: 20px;
+  top: 13px;
+}
+.user_avatar a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 5%);
+  background: url(../images/rightService/user.png) no-repeat;
+  background-size: 100% 100%;
+}
+.user_show {
+  width: 106px;
+  height: 38px;
+  position: absolute;
+  top: 16px;
+  left: 74px;
+  right: 10px;
+}
+.user_show p {
+  overflow: hidden;
+  height: 20px;
+  line-height: 20px;
+  width: 106px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 12px;
+}
+.user_tip {
+  font-size: 12px;
+  color: #666;
+}
+.user_login, .user_reg {
+  font-size: 12px;
+  color: #333;
+}
+.user_profit {
+  width: 190px;
+  height: 35px;
+}
+.user_profit_box {
+  width: 190px;
+  height: 25px;
+  font-size: 0;
+  text-align: center;
+}
+.user_profit_lk {
+  display: inline-block;
+  margin: 0 5px;
+  width: 70px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  border-radius: 13px;
+  background: #e1251b;
+  font-weight: 300;
+}
+.user_profit_lk_plus {
+  background: #363634;
+  color: #e5d790;
+  display: inline-block;
+  margin: 0 5px;
+  width: 70px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 13px;
+  font-weight: 300;
+}
+.news {
+  width: 190px;
+  height: 130px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.news_hd {
+  height: 20px;
+  padding: 10px 0 0;
+  position: relative;
+  line-height: 20px;
+  font-size: 0;
+  margin-bottom: 8px;
+}
+.news_title {
+  display: inline-block;
+  font-size: 14px;
+  margin-left: 15px;
+  color: #333;
+  font-weight: 400;
+}
+.news_list {
+  position: relative;
+  margin: 0 15px;
+  height: 88px;
+}
+.news_item {
+  height: 16px;
+  line-height: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #999;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+.news_item a {
+  color: #999;
+}
+.service {
+  width: 190px;
+  height: 238px;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+}
+.service_entry {
+  width: 190px;
+  height: 230px;
+  padding-top: 3px;
+  /* padding-bottom: 5px; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  text-align: center;
+}
+.service_entry a {
+  background: #fff;
+  overflow: hidden;
+  font-size: 12px;
+  color: #666;
+}
+.service_ico_img {
+  width: 28px;
+  height: 28px;
+  border: 0;
+  vertical-align: middle;
+}
+.service_txt {
+  display: block;
+  height: 25px;
+  line-height: 25px;
+  border-bottom: 2px solid #fff;
+  color: #333;
 }
 
 
