@@ -74,6 +74,9 @@ a {
   color: #999;
   font-weight: 300;
 }
+.link-login:hover {
+  color: #f10215; 
+}
 .fr .link-regist {
   color: #f10215; 
   text-decoration: none;
@@ -99,8 +102,14 @@ a {
   color: #999;
   font-weight: 300;
 }
+.shortcut_btn a:hover{
+  color: #e1251b;
+}
 .wuzhangai {
   width: 85px;
+}
+.wuzhangai:hover {
+  color: #e1251b;
 }
 
 
@@ -211,6 +220,68 @@ a {
   color: #fff;
   cursor: pointer;
   /* 手放上去，按钮动画效果变颜色未做*/
+}
+.dropdown {
+  width: 132px;
+  height: 34px;
+  border: 1px solid #e3e4e5;
+  position: absolute;
+  right: 230px;
+  top: 25px;
+  overflow: hidden;
+  background-color: #fff;
+  text-align: center;
+  line-height: 34px;
+  border-color: #eee;
+}
+.icon-3 {
+  font-size: 16xp;
+  color: #e1251b;
+  margin-right: 4px;
+  font-weight: 600;
+}
+.dropdown a {
+  width: 60px;
+  height: 12px;
+  font-size: 12px;
+  color: #e1251b;
+  font-weight: 400;
+}
+#navitems {
+  width: 765px;
+  overflow: hidden;
+  position: absolute;
+  left: 203px;
+  bottom: 0;
+  height: 40px;
+  padding-top: 20px;
+}
+.navitems-group {
+  width: 765px;
+  height: 40px;
+}
+.navitems-group li{
+  float: left;
+  margin-left: 1px;
+}
+#navitems a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  font-size: 15px;
+  color: #333;
+  margin: 0 11px;
+  font-weight: 300;
+}
+#navitems a:hover {
+  color: #e1251b;
+}
+#treasure {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  width: 190px;
+  height: 120px;
 }
 
 

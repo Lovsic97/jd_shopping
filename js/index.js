@@ -152,15 +152,18 @@ document.onscroll = function() {
   let searchM = document.querySelector('.search-m');
   let searchForm = document.querySelector('.form');
   let searchLogo = document.querySelector('.search-logo');
+  let searchBtn = document.querySelector('.dropdown');
   if(scrollHeight > 650) {
     searchXD.className = 'search-fix'
     searchM.style.height = '50px';
     searchForm.style.top = '8px';
+    searchBtn.style.top = '8px';
     searchLogo.style.display = 'block';
   } else {
     searchXD.className = '';
     searchM.style.height = '60px';
     searchForm.style.top = '25px';
+    searchBtn.style.top = '25px';
     searchLogo.style.display = 'none';
   }
 }
