@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1167143",
+      "name": "出发地和地点",
+      "font_class": "chufadihedidian",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
       "icon_id": "1221178",
       "name": "放大镜",
       "font_class": "fangdajing",

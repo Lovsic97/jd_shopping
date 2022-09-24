@@ -10,6 +10,99 @@
 body {
   background-color: #f4f4f4;
 }
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+
+/*shortcut样式*/
+#shortcut {
+  height: 30px;
+  border-bottom: 1px solid #ddd;
+  background-color: #e3e4e5;
+  height: 30px;
+  line-height: 30px;
+  color: #999;
+  font-size: 12px;
+}
+.fl {
+  float: left;
+  width: 58px;
+  height: 30px;
+  position: relative;
+}
+.fl a {
+  width: 47px;
+  height: 28px;
+  line-height: 28px;
+  padding-left: 7px;
+  padding-right: 7px;
+  overflow: hidden;
+  position: relative;
+  color: #999;
+  float: left;
+  border: 1px solid #e3e4e5;
+  text-decoration: none;
+}
+.ui-areamini-text {
+  width: 24px;
+  height: 12px;
+  font-size: 12px;
+  margin-left: -4px;
+  font-weight: 300;
+}
+.fr {
+  width: 814px;
+  height: 30px;
+  float: right;
+}
+#ttbar-login {
+  width: 126px;
+  height: 30px;
+  margin-right: 8px;
+}
+.fr>li {
+  float: left;
+}
+.fr .link-login {
+  text-decoration: none; 
+  width: 72px; 
+  height: 12px;
+  color: #999;
+  font-weight: 300;
+}
+.fr .link-regist {
+  color: #f10215; 
+  text-decoration: none;
+  width: 48px;
+  height: 12px;
+  font-weight: 300;
+}
+.spacer {
+  width: 1px;
+  height: 10px;
+  overflow: hidden;
+  margin: 11px 5px 0;
+  background-color: #ccc;
+}
+.shortcut_btn {
+  width: 62px;
+  height: 30px;
+}
+.shortcut_btn a {
+  display: block;
+  padding-left: 7px;
+  padding-right: 7px;
+  color: #999;
+  font-weight: 300;
+}
+.wuzhangai {
+  width: 85px;
+}
+
 
 /* 头部样式*/
 #header {
@@ -64,6 +157,7 @@ body {
   background: url(../images/sprite@2x.png) no-repeat;
   background-position: 0 -120px;
   background-size: 100%;
+  z-index: -1;
 }
 .search-m .form {
   position: absolute;

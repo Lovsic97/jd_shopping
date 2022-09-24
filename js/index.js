@@ -71,7 +71,7 @@ slide.onmouseout = function() {
 }
 // 小圆点切换
 for(let i = 0; i < lis.length; i++) {
-  lis[i].onclick = function() {
+  lis[i].onmousemove = function() {
     count = i;
     changeImg();
   }
