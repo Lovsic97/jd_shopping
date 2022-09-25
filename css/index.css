@@ -381,6 +381,7 @@ a {
   outline: none;
   cursor: pointer;
   color: #f4f4f4;
+  z-index: 7;
 }
 .slide_pre {
   left: 0;
@@ -636,7 +637,6 @@ a {
 .spec {
   height: 980px;
   margin-bottom: 20px;
-  background-color: #fff;
 }
 .channels {
   height: 1005px;
@@ -734,4 +734,231 @@ a {
   100% {
     top: 75px;
   }
+}
+
+/* 京东秒杀部分 */
+.seckill-countdown {
+  display: block;
+  width: 190px;
+  height: 260px;
+  background-image: url(../images/seckill/miaosha.png);
+  background-size: 100% 100%;
+  color: #fff;
+  float: left;
+}
+.countdown-title {
+  width: 190px;
+  height: 45px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  padding-top: 31px;
+}
+.countdown-desc {
+  width: 190px;
+  height: 26px;
+  margin-top: 90px;
+  font-size: 14px;
+  text-align: center;
+}
+.countdown-desc strong {
+  font-size: 18px;
+  padding-right: 2px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-top: -3px
+}
+.countdown-main {
+  width: 130px;
+  height: 30px;
+  margin: 10px 30px 0 30px;
+  display: block;
+}
+.timer {
+  position: relative;
+  float: left;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  background-color: #2f3430;
+  margin-right: 20px;
+  color: white;
+  font-size: 20px;
+}
+.timer_hour::after {
+  content: ":";
+  display: block;
+  position: absolute;
+  right: -20px;
+  font-weight: bolder;
+  font-size: 18px;
+  width: 20px;
+  height: 100%;
+  top: 0;
+}
+.timer_minute::after {
+  content: ":";
+  display: block;
+  position: absolute;
+  right: -20px;
+  font-weight: bolder;
+  font-size: 18px;
+  width: 20px;
+  height: 100%;
+  top: 0;
+}
+.seckill-list {
+  float: left;
+  width: 800px;
+  height: 260px;
+  position: relative;
+}
+.slider_wrapper {
+  width: 3200px;
+  opacity: 1; 
+  overflow: hidden;
+}
+.seckill-item {
+  display: block;
+  width: 200px;
+  height: 260px;
+  float: left;
+}
+.lazyimg {
+  width: 160px;
+  height: 160px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 50px;
+}
+.lazyimg img {
+  width: 160px;
+  height: 160px;
+}
+
+.seckill-brand {
+  width: 190px;
+  height: 260px;
+  margin-left: 10px;
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+}
+.brand-item {
+  width: 170px;
+  height: 240px;
+  padding: 10px;
+}
+.brand-item img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.item-info {
+  width: 180px;
+  height: 90px;
+  margin-top: 10px;
+}
+.item-info-action {
+  text-align: center;
+  width: 76px;
+  height: 22px;
+  border: 1px solid #e1251b;
+  color: #e1251b;
+  border-radius: 14px;
+  line-height: 22px;
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 4px;
+  margin-left: 50px;
+}
+
+
+
+/*自动播放*/
+.spec_both {
+  float: left;
+  width: 590px;
+  height: 340px;
+  margin-right: 10px;
+  background-color: #fff;
+}
+.spec_bottom {
+  height: 340px;
+  padding-bottom: 20px;
+}
+.niceGoods {
+  width: 1190px;
+  height: 260px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.nice_goods_logo {
+  float: left;
+  display: block;
+  width: 190px;
+  height: 260px;
+  background-image: url(../images/nicegoods/下载.png);
+  background-size: 100% 100%;
+}
+.nice_goods_recommends {
+  position: relative;
+  float: left;
+  width: 990px;
+  height: 260px;
+  margin-left: 10px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.goods_container {
+  overflow: hidden;
+  width: 2970px;
+}
+.goods_container a{
+  display: block;
+  float: left;
+  width: 247.5px;
+  height: 260px;
+}
+.goods_container img {
+  width: 100%;
+  height: 100%;
+}
+.slide-bar {
+  width: 960px;
+  height: 3px;
+  position: absolute;
+  left: 15px;
+  bottom: 10px;
+  border-radius: 3px;
+  background-color: #f3f3f3;
+  opacity: 1;
+}
+.slide-points {
+  width: 100px;
+  height: 9px;
+  border-radius: 4px;
+  background-color: #d8d8d8;
+  position: absolute;
+  top: 50%;
+  margin-top: -4.5px;
+}
+
+
+
+/*core2*/
+.core2 {
+  width: 1190px;
+  height: 340px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.core2_box {
+  width: 290px;
+  height: 340px;
+  background-color: #fff;
 }

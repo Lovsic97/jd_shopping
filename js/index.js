@@ -255,6 +255,89 @@ document.onscroll = function() {
 }
 
 
+// 实现秒杀倒计时
+let timerHour = document.querySelector('.timer_hour');
+let timerMinute = document.querySelector('.timer_minute');
+let timerSecond = document.querySelector('.timer_second');
+let timeSum = 43200;
+let hour = 0;
+let minute = 0;
+let second = 0;
+let timerKill = setInterval(function() {
+  if(timeSum > 0) {
+    timeSum--;
+  } else {
+    timeSum = 43200;
+  }
+  hour = parseInt(timeSum / 60 / 60);
+  hour = hour < 10 ? '0' + hour : hour;
+  minute = parseInt(timeSum / 60 % 60);
+  minute = minute < 10 ? '0' + minute : minute;
+  second = parseInt(timeSum % 60);
+  second = second < 10 ? '0' + second : second;
+  timerHour.innerHTML = hour;
+  timerMinute.innerHTML = minute;
+  timerSecond.innerHTML = second;
+}, 1000)
 
+// 实现秒杀右边的轮播图
+let sliderWrapper = document.querySelector('.slider_wrapper');
+let killPreBtn = document.querySelector('.seckill-list .slide_pre');
+let killNextBtn = document.querySelector('.seckill-list .slide_next');
+let indexKill = -800;
+let timeIndexKill = null;
+// 右按钮
+killNextBtn.onclick = function() {
+  if(indexKill >= -2400) {
+    indexKill -= 800;
+    sliderWrapper.style.transition = 'transform 500ms ease-in-out 0s';
+    sliderWrapper.style.transform = 'translate(' + indexKill + 'px, 0px)';
+  }
+  if(indexKill == -2400) {
+    setTimeout(function() {
+      indexKill = -800;
+      sliderWrapper.style.transition = '';
+      sliderWrapper.style.transform = 'translate(' + indexKill + 'px, 0px)';
+    }, 500)   // 等待500毫秒将动画执行完毕，再修改动画效果跳转到第一页
+  }
+}
+// 左按钮
+killPreBtn.onclick = function() {
+  if(indexKill >= -2400) {
+    indexKill += 800;
+    sliderWrapper.style.transition = 'transform 500ms ease-in-out 0s';
+    sliderWrapper.style.transform = 'translate(' + indexKill + 'px, 0px)';
+  }
+  if(indexKill == 0) {
+    setTimeout(function() {
+      indexKill = -1600;
+      sliderWrapper.style.transition = '';
+      sliderWrapper.style.transform = 'translate(' + indexKill + 'px, 0px)';
+    }, 500)   // 等待500毫秒将动画执行完毕，再修改动画效果跳转到第一页
+  }
+}
 
-
+// 实现自动从左往右播放功能
+let goodsContainer = document.querySelector('.goods_container');
+let leftSteps = 0;
+let timerGoods = setInterval(function() {
+  if(leftSteps > -1980) {
+    leftSteps -= 1;
+  } else {
+    leftSteps = 0;
+  }
+  goodsContainer.style.left = leftSteps + 'px';
+}, 13)
+goodsContainer.onmouseover = function() {
+  clearInterval(timerGoods);
+}
+goodsContainer.onmouseout = function() {
+  timerGoods = setInterval(function() {
+    if(leftSteps > -1980) {
+      leftSteps -= 1;
+    } else {
+      leftSteps = 0;
+    }
+    goodsContainer.style.left = leftSteps + 'px';
+  }, 13)
+}
